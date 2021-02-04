@@ -9,7 +9,7 @@
 
 # AWS Cloud9 Setup
 
-Follow the video of my setup. In the video you will see the following actions (with approximate time stamps).
+Follow [the video of my setup](https://youtu.be/IwRPcyY891g). In the video you will see the following actions (with approximate time stamps).
 * (00:00) Create a new environment with t2.micro and Ubuntu Server 18.04
 * (00:35) Create and run the [resizing script from AWS](https://docs.aws.amazon.com/cloud9/latest/user-guide/move-environment.html#move-environment-resize). This will increase the amount of storage you have behind your C9 instance. Some of the libraries we install take up extra space and it can run out.
 * (01:53) Install postgres and a dependency. We will use this database instead of sqlite3. Here's the command:

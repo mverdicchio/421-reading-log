@@ -1,7 +1,22 @@
-<h1>Future show page!</h1>
+<h1>View Reading Entry</h1>
 
 
     <li>
-        <%= @entry.book_title %>
+       Title:  <%= @entry.book_title %>
       </a>
     </li>
+    <li>
+       Pages:  <%= @entry.pages %>
+      </a>
+    </li>
+    <li>
+       Date:  <%= @entry.date %>
+      </a>
+    </li>
+
+    <ul>
+      <li><%= link_to "Edit", edit_entry_path(@entry) %></li>
+      <li><%= link_to "Destroy", entry_path(@entry),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+    </ul>

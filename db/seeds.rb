@@ -7,5 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 5.times do |i|
-   Entry.create(book_title: "title #{i}", pages: 42, date: Time.now) 
+   Entry.create(book_title: "See Spot Run", pages: rand(100), date: Time.now-rand(10000)) 
+end
+5.times do |i|
+   Entry.create(book_title: "Oh the Places you'll Go", pages: rand(100), date: Time.now-rand(10000)) 
+end
+5.times do |i|
+   Entry.create(book_title: "The Cow Jumped Over the Moon", pages: rand(100), date: Time.now-rand(10000)) 
+end
+5.times do |i|
+   Entry.create(book_title: "The Hitchhiker's Guide to the Galaxy", pages: rand(100), date: Time.now-rand(10000)) 
 end

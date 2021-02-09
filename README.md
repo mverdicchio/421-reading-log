@@ -19,8 +19,12 @@ Follow [the video of my setup](https://youtu.be/IwRPcyY891g). In the video you w
 * (03:36) Run `bundle install`, which will install all required gems listed in `Gemfile`.
 * (04:18) Install `figaro`, which will generate `config/application.yml` locally.
 * (04:47) Edit `config/appication.yml` with the environment variables (database username and password) EXACTLY as shown.
-  * `PG_USER: "pg-user"`
-  * `PG_PASS: "pg-pass123"`
+
+```
+PG_USER: "pg-user"
+PG_PASS: "pg-pass123"
+```
+
   * These must be consistent with `config/database.yml`.
 * (05:10) Set up the database user for your environment as shown in the next section.
 

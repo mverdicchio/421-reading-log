@@ -8,4 +8,7 @@ class EntriesController < ApplicationController
         @entry = Entry.find(params[:id])
     end
     
+    def new
+        @entry = Entry.new
+    end
 end

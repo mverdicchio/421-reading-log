@@ -1,0 +1,37 @@
+<%= form_with(model: entry) do |form| %>
+  <% if entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+
+      <ul>
+        <% entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Title %>
+    <%= form.text_field :Title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Author %>
+    <%= form.text_field :Author %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :Pages %>
+    <%= form.text_field :Pages %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateinputed %>
+    <%= form.datetime_select :dateinputed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,14 +1,48 @@
-<h1>Future index page!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+</style>
+</head>
+<body>
 
 
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
 
+</body>
+</html>
+
+<h1 style="background-color:DodgerBlue;">Entries</h1>
+
+
+  <% @entries.each do |entry| %>
+    <p>
+        <%= link_to entry.book_title, entry %>
+        <%= link_to entry.pages, entry %>
+    </p>
+  <% end %>
+  
 
 <ul>
-  <% @entries.each do |entry| %>
-    <li>
-      <a href="/entries/<%= entry.id %>">
-        <%= entry.book_title %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<%= link_to "New Entry", new_entry_path %></ul>

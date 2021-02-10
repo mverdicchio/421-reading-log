@@ -1,7 +1,21 @@
-<h1>Future show page!</h1>
+<h1 style="background-color:DodgerBlue;">Edit Entry</h1>
 
 
-    <li>
+    <p>
+        Book Tilte: 
         <%= @entry.book_title %>
       </a>
-    </li>
+    </p>
+    
+    <p>
+        <%= @entry.pages %>
+      </a>
+      Pages Read!
+    </p>
+
+  <t><%= link_to "Edit", edit_entry_path(@entry) %></t>
+  <t><%= link_to "Destroy", entry_path(@entry),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></t>
+
+<a href="https://e4b71f4d20eb435499ecbcbb7b5b00ea.vfs.cloud9.us-east-2.amazonaws.com">Return </a>

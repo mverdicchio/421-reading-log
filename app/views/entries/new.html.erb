@@ -1,0 +1,25 @@
+<h1 style="background-color:DodgerBlue;">New Entry</h1>
+
+
+<%= form_with model: @entry do |form| %>
+  <div>
+    <%= form.label :book_title %><br>
+    <%= form.text_field :book_title %>
+    <% @entry.errors.full_messages_for(:book_title).each do |message| %>
+  </div><%= message %></div>
+  <% end %>
+  </div>
+
+  <div>
+    <%= form.label :pages %><br>
+    <%= form.text_area :pages %>
+   <% @entry.errors.full_messages_for(:pages).each do |message| %>
+  </div><%= message %></div>
+  <% end %>
+  </div>
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

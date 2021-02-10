@@ -8,4 +8,18 @@ class EntriesController < ApplicationController
         @entry = Entry.find(params[:id])
     end
     
+  
+  def new
+    @entry = Entry.new
+  end
+
+  def create
+    @entry = Entry.new(title: "...", body: "...", page: "...")
+
+    if @entry.save
+      redirect_to @entry
+    else
+      render :new
+    end
+  end
 end

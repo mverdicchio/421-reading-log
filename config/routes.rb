@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   
   root "entries#index"
-
+# root to: "home#index" THIS IS FOR "DEVISE"
   resources :entries
   
   

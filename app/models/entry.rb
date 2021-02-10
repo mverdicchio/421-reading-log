@@ -1,2 +1,6 @@
 class Entry < ApplicationRecord
+    
+    
+    
+    
 end

@@ -1,6 +1,6 @@
-<h1>Future index page!</h1>
+<h1>All The Books Belong To Us</h1>
 
-
+<%= button_to "Add New Book", new_entry_path, method: :get %>
 
 
 <ul>
@@ -8,6 +8,12 @@
     <li>
       <a href="/entries/<%= entry.id %>">
         <%= entry.book_title %>
+      </a>
+      <a href="/entries/<%= entry.id %>">
+        <%= entry.pages %>
+      </a>
+      <a href="/entries/<%= entry.id %>">
+        <%= entry.date %>
       </a>
     </li>
   <% end %>

@@ -1,0 +1,12 @@
+<h1>New Books</h1>
+
+<%= form_for @entry do |f|%>
+    <%= f.label :book_title%>
+    <%= f.text_field :book_title%>
+    <%= f.label :pages%>
+    <%= f.text_field :pages%>
+    <%= f.label :date%>
+    <%= f.text_field :date%>
+    
+    <%= f.submit%>
+<%end%>
